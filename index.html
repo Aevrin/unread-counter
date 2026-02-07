@@ -3,94 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Mail Check</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0f1a2a;
-            color: #e6f0ff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            padding: 3rem 1.5rem;
-            line-height: 1.7;
-        }
-        .container {
-            max-width: 640px;
-            width: 100%;
-        }
-        h1 {
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-            color: #06b6d4;
-        }
-        .subtitle {
-            color: rgba(230,240,255,0.5);
-            font-size: 0.85rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(70,90,126,0.3);
-        }
-        h2 {
-            font-size: 1.1rem;
-            color: #93c5fd;
-            margin-top: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            color: rgba(230,240,255,0.8);
-            margin-bottom: 1rem;
-        }
-        .highlight {
-            background: rgba(6,182,212,0.08);
-            border-left: 3px solid #06b6d4;
-            padding: 1rem 1.25rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1.5rem 0;
-        }
-        .highlight p { margin-bottom: 0; }
-        footer {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(70,90,126,0.3);
-            color: rgba(230,240,255,0.4);
-            font-size: 0.8rem;
-        }
-        a { color: #06b6d4; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <title>Mail Check</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="subtitle">Mail Check — a personal utility by Aevrin</p>
+<body class="dark-mode">
+    <header>
+        <h1><a href="./" id="title">Mail Check</a></h1>
+        <div class="header-actions">
+            <button id="theme-toggle" title="Toggle theme">☀️</button>
+        </div>
+    </header>
 
-        <div class="highlight">
-            <p>Mail Check is a personal, self-hosted application that displays your unread email count. It does not collect, store, share, or sell any personal data.</p>
+    <main>
+        <div id="view-setup" class="card hidden">
+            <h2>Setup Required</h2>
+            <p>Edit <code>data/config.json</code> with your Google OAuth credentials, then refresh this page.</p>
+            <pre>{
+  "client_id": "your-client-id.apps.googleusercontent.com",
+  "client_secret": "your-client-secret",
+  "redirect_uri": "https://your-domain.com/api.php?action=callback"
+}</pre>
         </div>
 
-        <h2>What the app does</h2>
-        <p>Mail Check connects to the Gmail API using OAuth 2.0 with the <code>gmail.readonly</code> scope. It reads only your inbox label metadata to retrieve your unread message count. It does not read, store, or process the contents of any emails.</p>
+        <div id="view-auth" class="card hidden">
+            <h2>Connect Gmail</h2>
+            <p>Authorize this app to read your Gmail inbox.</p>
+            <button id="btn-auth" class="btn-primary">Connect with Google</button>
+        </div>
 
-        <h2>Data storage</h2>
-        <p>An OAuth refresh token is stored locally on the self-hosted server to maintain your authenticated session. No data is transmitted to any third party, analytics service, or external server.</p>
+        <div id="view-mail" class="card hidden">
+            <div class="unread-display">
+                <span id="unread-count" class="count">—</span>
+                <span class="count-label">unread emails</span>
+            </div>
+            <div class="mail-meta">
+                <span id="total-count"></span>
+                <span id="last-checked"></span>
+            </div>
+            <div class="mail-actions">
+                <button id="btn-refresh" class="btn-primary">Refresh</button>
+                <button id="btn-logout" class="btn-secondary">Disconnect</button>
+            </div>
+        </div>
+    </main>
 
-        <h2>Data sharing</h2>
-        <p>None. No personal information, email content, or usage data is shared with anyone.</p>
-
-        <h2>Third-party services</h2>
-        <p>The app communicates solely with Google's OAuth and Gmail APIs to authenticate and retrieve inbox metadata. No other third-party services are used.</p>
-
-        <h2>Your rights</h2>
-        <p>You can revoke access at any time by visiting your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a> page or by disconnecting from within the app.</p>
-
-        <h2>Contact</h2>
-        <p>Questions about this policy can be directed to the app owner via the contact information listed at <a href="mailto:privacy@aevrin.com">aevrin.com</a>.</p>
-
-        <footer>
-            Last updated: February 2026
-        </footer>
-    </div>
+    <script src="app.js"></script>
 </body>
 </html>
