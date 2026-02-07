@@ -122,10 +122,16 @@ main {
 
 .unread-display {
     display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.unread-group {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
-    margin-bottom: 1.5rem;
 }
 
 .count {
@@ -133,6 +139,10 @@ main {
     font-weight: 700;
     color: var(--aquamarine);
     line-height: 1;
+}
+
+.count-secondary {
+    color: var(--primary-blue-light);
 }
 
 .count-label {

@@ -55,7 +55,8 @@ async function fetchUnread() {
         }
         const data = await res.json();
         countEl.textContent = data.unread;
-        document.getElementById('total-count').textContent = `${data.total} total`;
+        document.getElementById('threads-count').textContent = data.threads_unread;
+        document.getElementById('total-count').textContent = `${data.total} messages / ${data.threads_total} threads`;
         document.getElementById('last-checked').textContent = `Checked ${new Date().toLocaleTimeString()}`;
     } catch (e) {
         countEl.textContent = '!';

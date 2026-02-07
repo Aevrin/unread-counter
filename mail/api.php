@@ -44,7 +44,7 @@ switch ($action) {
             'client_id' => $config['client_id'],
             'redirect_uri' => $config['redirect_uri'],
             'response_type' => 'code',
-            'scope' => 'https://www.googleapis.com/auth/gmail.readonly',
+            'scope' => 'https://www.googleapis.com/auth/gmail.labels',
             'access_type' => 'offline',
             'prompt' => 'consent'
         ]);
@@ -98,8 +98,10 @@ switch ($action) {
             exit;
         }
         echo json_encode([
-            'unread' => $result['threadsUnread'] ?? 0,
-            'total' => $result['threadsTotal'] ?? 0
+            'unread' => $result['messagesUnread'] ?? 0,
+            'threads_unread' => $result['threadsUnread'] ?? 0,
+            'total' => $result['messagesTotal'] ?? 0,
+            'threads_total' => $result['threadsTotal'] ?? 0
         ]);
         break;
 
