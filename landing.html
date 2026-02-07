@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Check</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f1a2a;
+            color: #e6f0ff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+        }
+
+        .hero {
+            text-align: center;
+            max-width: 560px;
+            margin-bottom: 4rem;
+        }
+
+        .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: rgba(6,182,212,0.1);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 24px;
+            border: 1px solid rgba(6,182,212,0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #e6f0ff;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        h1 span { color: #06b6d4; }
+
+        .tagline {
+            font-size: 1.15rem;
+            color: rgba(230,240,255,0.6);
+            margin-bottom: 2.5rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .feature {
+            background: rgba(25,37,52,0.8);
+            border: 1px solid rgba(70,90,126,0.2);
+            border-radius: 12px;
+            padding: 1.5rem 1rem;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #93c5fd;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-desc {
+            font-size: 0.8rem;
+            color: rgba(230,240,255,0.5);
+        }
+
+        .cta {
+            display: inline-block;
+            background: #375a82;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .cta:hover { background: #4b6d94; }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 1.25rem;
+            font-size: 0.8rem;
+            color: rgba(230,240,255,0.3);
+        }
+
+        footer a {
+            color: rgba(230,240,255,0.4);
+            text-decoration: none;
+            margin: 0 0.75rem;
+        }
+
+        footer a:hover {
+            color: #06b6d4;
+        }
+
+        @media (max-width: 520px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="icon">✉️</div>
+        <h1>Mail <span>Check</span></h1>
+        <p class="tagline">A simple, self-hosted unread email counter for Gmail.</p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">Private</div>
+                <div class="feature-desc">Self-hosted. No data leaves your server.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Minimal</div>
+                <div class="feature-desc">Read-only. Just your unread count.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔑</div>
+                <div class="feature-title">Secure</div>
+                <div class="feature-desc">OAuth 2.0. No passwords stored.</div>
+            </div>
+        </div>
+
+        <a href="https://github.com/Aevrin/unread-counter" class="cta">View on GitHub</a>
+    </div>
+
+    <footer>
+        <a href="https://privacy.aevrin.com">Privacy Policy</a>
+        <a href="https://terms.aevrin.com">Terms of Service</a>
+    </footer>
+</body>
+</html>
