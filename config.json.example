@@ -1,0 +1,5 @@
+{
+  "client_id": "123456789012-abcdefghijklmnopqrstuvwxyz123456.apps.googleusercontent.com",
+  "client_secret": "GOCSPX-abcdefghijklmnopqrstuvwxyz",
+  "redirect_uri": "https://mail.yourdomain.com/api.php?action=callback"
+}
