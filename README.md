@@ -16,6 +16,7 @@ A simple, self-hosted Gmail unread counter using OAuth2.
 This app is designed for single-user, authenticated access behind a reverse proxy. Without proper authentication, anyone with the URL could:
 - Trigger OAuth flows using your credentials
 - Access your Gmail data if already authenticated
+- Web frontend joined to cloudflare
 
 ## Setup
 
