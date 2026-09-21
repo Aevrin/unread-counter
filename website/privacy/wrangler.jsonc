@@ -1,5 +1,5 @@
 {
-  "name": "privacy-aevrin",
+  "name": "privacy",
   "compatibility_date": "2026-09-01",
   "assets": { "directory": "./" },
   "workers_dev": false,
