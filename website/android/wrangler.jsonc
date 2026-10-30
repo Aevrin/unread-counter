@@ -1,5 +1,5 @@
 {
-  "name": "anrdoid",
+  "name": "android",
   "compatibility_date": "2026-09-01",
   "assets": { "directory": "./" },
   "workers_dev": false,
