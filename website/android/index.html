@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Links (Android app)</title>
+<script>
+  // Apply theme before first paint. Dark is the default.
+  try { if (localStorage.getItem('theme') !== 'light') document.documentElement.classList.add('dark-mode'); }
+  catch (e) { document.documentElement.classList.add('dark-mode'); }
+</script>
+<style>
+:root{--primary-blue:#3d52a0;--aquamarine:#06b6d4;--aquamarine-dark:#0891b2;
+  --bg-primary:#f0f0f0;--bg-secondary:#fff;--text-primary:#222;--text-secondary:#555;--text-muted:#666;
+  --border-default:rgba(0,0,0,.2);--button-secondary:#6c7ec5;--button-secondary-hover:#5a6cb3;--link:#1d4ed8}
+.dark-mode{--bg-primary:#0f1a2a;--bg-secondary:#192534;--text-primary:#e6f0ff;--text-secondary:rgba(230,240,255,.8);
+  --text-muted:rgba(230,240,255,.6);--border-default:rgba(70,90,126,.3);--button-secondary:#2a3b53;
+  --button-secondary-hover:#3a4d69;--link:#93c5fd}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg-primary);color:var(--text-primary);
+  font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  max-width:760px;margin:0 auto;padding:1.25rem 16px}
+header a.title{color:var(--text-primary);text-decoration:none;font-weight:700;font-size:1.15rem}
+header a.title span{color:var(--aquamarine)}
+button{background:var(--button-secondary);color:#fff;border:0;border-radius:6px;padding:.45rem .8rem;font:inherit;cursor:pointer}
+button:hover{background:var(--button-secondary-hover)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--aquamarine);outline-offset:2px}
+main{max-width:760px;margin:0 auto 3rem;padding:1.5rem 16px 2rem;background:var(--bg-secondary);
+  border:1px solid var(--border-default);border-radius:10px}
+@media (min-width:800px){main{padding:2rem 2.5rem}}
+h1{font-size:1.6rem;margin:0 0 .25rem}
+h2{font-size:1.15rem;margin:2rem 0 .5rem;color:var(--aquamarine-dark)}
+.dark-mode h2{color:var(--aquamarine)}
+.meta{color:var(--text-muted);margin:0 0 1.5rem}
+a{color:var(--link)}
+ul{padding-left:1.25rem}
+li{margin:.25rem 0}
+code{font-size:.92em}
+</style>
+</head>
+<body>
+<header>
+  <a class="title" href="" onclick="location.reload();return false;">Links <span>Privacy</span></a>
+  <button id="theme" type="button" aria-label="Toggle light and dark theme">Theme</button>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Links (Android app, package <code>com.aevrin.webview</code>) · Effective October 30, 2026</p>
+
+  <p>Links is a personal Android app published by Aevrin. It opens a private, self-hosted website
+  (<code>gstorck.com</code>) inside the app. It is distributed only to invited testers through Google Play
+  and is not offered to the public.</p>
+
+  <h2>What the app collects</h2>
+  <p>The app itself does not collect, store, sell or share any personal information. It contains no analytics,
+  advertising, crash-reporting or tracking code, and it does not access your contacts, location, camera,
+  microphone or other device data.</p>
+
+  <h2>What stays on your device</h2>
+  <ul>
+    <li><strong>Cookies and website storage.</strong> Like a browser, the app keeps cookies and local storage
+      set by the website so you stay signed in and your settings (such as the theme) are remembered. These stay
+      on your device and are removed if you clear the app's storage or uninstall it.</li>
+    <li><strong>Files you choose.</strong> If you pick a file to upload, it is sent only to the website you are
+      using in the app. Files you download are saved to your device's Downloads folder by Android.</li>
+  </ul>
+
+  <h2>The website the app opens</h2>
+  <p>Using the app means using the website at <code>gstorck.com</code> and its sign-in service at
+  <code>auth.gstorck.com</code>, both run by the publisher. As with any website, the servers receive the data
+  needed to work: your IP address, the pages you request, the time of each request, your sign-in details, and
+  anything you enter. Server logs are used only to operate and secure the service. This information is not sold,
+  shared with third parties, or used for advertising.</p>
+
+  <h2>Links to other sites</h2>
+  <p>Links to other websites open in your regular browser, not in the app. Those sites have their own privacy
+  policies.</p>
+
+  <h2>Google Play</h2>
+  <p>The app is installed and updated through Google Play. Google's handling of your data is covered by the
+  <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+
+  <h2>Children</h2>
+  <p>The app is not directed to children under 13 and is available only to invited testers.</p>
+
+  <h2>Your choices</h2>
+  <p>You can clear the app's data in Android Settings → Apps → Links → Storage, or uninstall the app at any time.
+  To ask about or delete data held by the website, contact the publisher below.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version will be posted here with a new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Aevrin · <a href="mailto:privacy@example.com">privacy@example.com</a></p>
+</main>
+
+<script>
+  document.getElementById('theme').addEventListener('click', function () {
+    var dark = document.documentElement.classList.toggle('dark-mode');
+    try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+  });
+</script>
+</body>
+</html>
