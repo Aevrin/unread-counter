@@ -1,5 +1,5 @@
 {
-  "name": "terms",
+  "name": "anrdoid",
   "compatibility_date": "2026-09-01",
   "assets": { "directory": "./" },
   "workers_dev": false,
