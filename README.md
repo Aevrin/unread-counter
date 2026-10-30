@@ -9,7 +9,7 @@ A simple, self-hosted Gmail unread counter using OAuth2.
 - Dark/light theme toggle
 - Single-user, self-hosted
 
-## Security Notice
+## Security Notices
 
 **⚠️ DO NOT EXPOSE THIS APPLICATION DIRECTLY TO THE INTERNET**
 
